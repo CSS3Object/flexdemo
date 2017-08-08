@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*流式布局*/
+        ul,li{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        .parent {
+            width: 200px;
+            height: 150px;
+            background-color: black;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+        }
+        .child {
+            box-sizing: border-box;
+            background-color: white;
+            flex: 0 0 25%;
+            height: 50px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<ul class="parent">
+    <li class="child"></li>
+    <li class="child"></li>
+    <li class="child"></li>
+    <li class="child"></li>
+    <li class="child"></li>
+    <li class="child"></li>
+    <li class="child"></li>
+    <li class="child"></li>
+</ul>
+</body>
+</html>

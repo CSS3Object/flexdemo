@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*容器拥有六个属性
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content*/
+        /*align-items属性定义项目在交叉轴上如何对齐。*/
+    /*    它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。
+        flex-start：交叉轴的起点对齐。
+        flex-end：交叉轴的终点对齐。
+        center：交叉轴的中点对齐。
+        baseline: 项目的第一行文字的基线对齐。
+        stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。*/
+        ul,li{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow:row nowrap;
+            justify-content:flex-start;
+            align-items:flex-start;
+        }
+        .box-children{
+            width:100px;
+            height:100px;
+            background:yellow;
+            margin-left:10px;
+            margin-top:10px;
+        }
+        .box-align-items-flex-end{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items:flex-end;
+        }
+        .box-align-items-flex-center{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items:center;
+        }
+        .box-align-items-baseline{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items:baseline;
+        }
+        .box-align-items-stretch{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items:stretch;
+        }
+        .box-child{
+            width:100px;
+            /*height:100px;*/
+            background:yellow;
+            margin-left:10px;
+            margin-top:10px;
+        }
+        /*经测试未设计高度则占满整个容器的高度 设计咯高度则为自己的高度值*/
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li class="box-children">1</li>
+    <li class="box-children">2</li>
+    <li class="box-children">3</li>
+    <li class="box-children">4</li>
+    <li class="box-children">5</li>
+</ul>
+<ul class="box-align-items-flex-end">
+    <li class="box-children">1</li>
+    <li class="box-children">2</li>
+    <li class="box-children">3</li>
+    <li class="box-children">4</li>
+    <li class="box-children">5</li>
+</ul>
+<ul class="box-align-items-flex-center">
+    <li class="box-children">1</li>
+    <li class="box-children">2</li>
+    <li class="box-children">3</li>
+    <li class="box-children">4</li>
+    <li class="box-children">5</li>
+</ul>
+<ul class="box-align-items-baseline">
+    <li class="box-children" style="font-size: 18px">
+        1
+    </li>
+    <li class="box-children" style="font-size: 22px">
+        2
+    </li>
+    <li class="box-children" style="font-size: 30px">
+        3
+    </li>
+    <li class="box-children" style="font-size: 36px">
+        4
+    </li>
+    <li class="box-children" style="font-size: 15px">
+        5
+    </li>
+</ul>
+<ul class="box-align-items-stretch">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*容器拥有六个属性
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content*/
+        /*flex-flow属性是flex-direction
+        属性和flex-wrap属性的简写形式，
+        默认值为row nowrap。*/
+      /*  语法.box {
+            flex-flow: <flex-direction> 11 <flex-wrap>;
+        }*/
+        ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        .box{
+            display:flex;
+            width:500px;
+            height:500px;
+            border:1px solid #000;
+            flex-direction:row;
+            flex-wrap: nowrap;
+            flex-flow:row-reverse  wrap;
+        }
+        .box-child{
+            width:100px;
+            height:100px;
+            background:yellow;
+            margin-left:10px;
+            margin-top:10px;
+        }
+        /*
+        经试验flex-flow可设一个值或两个值（若两个值中间用空格隔开）
+        若换行将会把所有的margin-top叠加到最后一个项目的值上面
+        */
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+</body>
+</html>

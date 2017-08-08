@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*容器拥有六个属性
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content*/
+ /*       默认情况下，
+ 项目都排在一条线（又称"轴线"）上。
+ flex-wrap属性定义，
+ 如果一条轴线排不下，
+ 如何换行。
+它可能取三个值。
+(1）nowrap（默认）：不换行。
+(2）wrap：换行，第一行在上方。
+（3）wrap-reverse：换行，第一行在下方。*/
+        ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        .box{
+            display:flex;
+            width:500px;
+            border:1px solid #000;
+            flex-direction:row;/*默认 横向排列 可不写*/
+            flex-wrap:nowrap;
+        }
+        .box-child{
+            width:101px;
+            height:100px;
+            margin-left:10px;
+            margin-top:10px;
+            background:yellow;
+        }
+        /*经试验此时box-child自动变成90*/
+        .box-wrap{
+            display:flex;
+            width:500px;
+            margin-top:10px;
+            border:1px solid blue;
+            flex-direction: row;/*默认 横向排列 可不写*/
+            flex-wrap:wrap;
+        }
+        .box-wrap-reverse{
+            display: flex;
+            width:500px;
+            margin-top:10px;
+            border:1px solid green;
+            flex-direction:row;/*默认 横向排列 可不写*/
+            flex-wrap:wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+<ul class="box-wrap">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+<ul class="box-wrap-reverse">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+</body>
+</html>

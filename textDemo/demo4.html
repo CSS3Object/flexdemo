@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*容器拥有六个属性
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content*/
+        /*justify-content属性定义了项目在主轴上的对齐方式。*/
+      /*  它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
+        flex-start（默认值）：左对齐
+        flex-end：右对齐
+        center： 居中
+        space-between：两端对齐，项目之间的间隔都相等。
+        space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。*/
+        ul,li{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow :row nowrap ;
+            justify-content:flex-start;
+        }
+        .box-child{
+            width:100px;
+            height:100px;
+            background:yellow;
+            margin-left:10px;
+            margin-top:10px;
+        }
+        .box-flex-end{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            flex-flow:row nowrap;
+            justify-content:flex-end;
+        }
+        .box-flex-center{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow:row nowrap;
+            justify-content:center
+        }
+        .box-flex-space-between{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+        }
+        .box-flex-space-around{
+            margin-top:20px;
+            width:800px;
+            height:200px;
+            background:blue;
+            display:flex;
+            flex-direction: row;
+            flex-wrap:nowrap;
+            flex-flow:row nowrap;
+            justify-content:space-around;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+<ul class="box-flex-end">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+<ul class="box-flex-center">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+<ul class="box-flex-space-between">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+<ul class="box-flex-space-around">
+    <li class="box-child">1</li>
+    <li class="box-child">2</li>
+    <li class="box-child">3</li>
+    <li class="box-child">4</li>
+    <li class="box-child">5</li>
+</ul>
+</body>
+</html>
